@@ -1,0 +1,1302 @@
+[
+    {
+        "source": "Uczę się polskiego języka już rok.",
+        "expected": "Uczę się języka polskiego już od roku."
+    },
+    {
+        "source": "Chcę zapisać się na kursy języka angielskiego.",
+        "expected": "Chcę zapisać się na kurs języka angielskiego."
+    },
+    {
+        "source": "On dobrze rozmawia po niemiecku.",
+        "expected": "On dobrze mówi po niemiecku."
+    },
+    {
+        "source": "Zdałem egzamin po hiszpańskiemu.",
+        "expected": "Zdałem egzamin z języka hiszpańskiego."
+    },
+    {
+        "source": "Ta język jest bardzo trudna.",
+        "expected": "Ten język jest bardzo trudny."
+    },
+    {
+        "source": "Muszę poprawić mój wymów.",
+        "expected": "Muszę poprawić moją wymowę."
+    },
+    {
+        "source": "Uczę się angielskiego dla pracy.",
+        "expected": "Uczę się angielskiego do pracy."
+    },
+    {
+        "source": "Chcę nauczyć się wolno rozmawiać.",
+        "expected": "Chcę nauczyć się rozmawiać swobodnie."
+    },
+    {
+        "source": "Nie znam ten wyraz.",
+        "expected": "Nie znam tego wyrazu."
+    },
+    {
+        "source": "Uczę się słówek z pomocą kartoczek.",
+        "expected": "Uczę się słówek za pomocą fiszek."
+    },
+    {
+        "source": "Mój nauczyciel zrobił mi uwagi na błędy.",
+        "expected": "Mój nauczyciel zwrócił mi uwagę na błędy."
+    },
+    {
+        "source": "Uczę się angielskiemu.",
+        "expected": "Uczę się angielskiego."
+    },
+    {
+        "source": "Oglądam filmy na angielskim języku.",
+        "expected": "Oglądam filmy w języku angielskim."
+    },
+    {
+        "source": "On robi złe udarenie w tym słowie.",
+        "expected": "On kładzie zły akcent w tym słowie."
+    },
+    {
+        "source": "Będę uczyć ten wiersz.",
+        "expected": "Będę uczyć się tego wiersza."
+    },
+    {
+        "source": "Uczę się polskiego z nauczycielem po Skype.",
+        "expected": "Uczę się polskiego z nauczycielem przez Skype."
+    },
+    {
+        "source": "Chcę podwyższyć mój poziom językowy.",
+        "expected": "Chcę podnieść swój poziom językowy."
+    },
+    {
+        "source": "Nie potrafię rozmawiać bez słownik.",
+        "expected": "Nie potrafię rozmawiać bez słownika."
+    },
+    {
+        "source": "Robimy dużo ćwiczeń na uroku.",
+        "expected": "Robimy dużo ćwiczeń na lekcji."
+    },
+    {
+        "source": "Ta metoda jest bardzo skuteczny.",
+        "expected": "Ta metoda jest bardzo skuteczna."
+    },
+    {
+        "source": "Systematyczna nauka języków obcych przynosi najlepsze rezultaty.",
+        "expected": "Systematyczna nauka języków obcych przynosi najlepsze rezultaty."
+    },
+    {
+        "source": "Czytanie książek w oryginale pomaga szybko przyswoić nowe słownictwo.",
+        "expected": "Czytanie książek w oryginale pomaga szybko przyswoić nowe słownictwo."
+    },
+    {
+        "source": "Moim celem jest swobodne porozumiewanie się po francusku.",
+        "expected": "Moim celem jest swobodne porozumiewanie się po francusku."
+    },
+    {
+        "source": "Często oglądam zagraniczne seriale z napisami, aby osłuchać się z językiem.",
+        "expected": "Często oglądam zagraniczne seriale z napisami, aby osłuchać się z językiem."
+    },
+    {
+        "source": "Zapisanie się na kurs grupowy bardzo mnie zmotywowało do regularnej pracy.",
+        "expected": "Zapisanie się na kurs grupowy bardzo mnie zmotywowało do regularnej pracy."
+    },
+    {
+        "source": "Jesienią liście na drzewach żółkną i spadają na ziemię.",
+        "expected": "Jesienią liście na drzewach żółkną i spadają na ziemię."
+    },
+    {
+        "source": "Wczoraj wieczorem nad miastem przeszła gwałtowna burza z piorunami.",
+        "expected": "Wczoraj wieczorem nad miastem przeszła gwałtowna burza z piorunami."
+    },
+    {
+        "source": "Prognoza pogody na weekend zapowiada słoneczną i ciepłą aurę.",
+        "expected": "Prognoza pogody na weekend zapowiada słoneczną i ciepłą aurę."
+    },
+    {
+        "source": "Wiosną w Tatrach wciąż leży mnóstwo śniegu.",
+        "expected": "Wiosną w Tatrach wciąż leży mnóstwo śniegu."
+    },
+    {
+        "source": "Klimat w tym regionie jest wyjątkowo łagodny i sprzyja roślinności.",
+        "expected": "Klimat w tym regionie jest wyjątkowo łagodny i sprzyja roślinności."
+    },
+    {
+        "source": "Kiedy wyszłam na ulicę, szedł mocny deszcz.",
+        "expected": "Kiedy wyszłam na dwór, padał rzęsisty deszcz."
+    },
+    {
+        "source": "Jutro pojedziemy z przyjaciółmi na przyrodę.",
+        "expected": "Jutro pojedziemy z przyjaciółmi na łono natury."
+    },
+    {
+        "source": "Rano nad rzeką stała gęsta mgła.",
+        "expected": "Rano nad rzeką unosiła się gęsta mgła."
+    },
+    {
+        "source": "Ubierz się ciepło, bo na ulicy jest bardzo zimno.",
+        "expected": "Ubierz się ciepło, bo na dworze jest bardzo zimno."
+    },
+    {
+        "source": "Zapowiadali, że wieczorem będzie wielka groza.",
+        "expected": "Zapowiadali, że wieczorem będzie wielka burza."
+    },
+    {
+        "source": "Jesienią kolorowe listia padają z drzew.",
+        "expected": "Jesienią kolorowe liście spadają z drzew."
+    },
+    {
+        "source": "W lesie było bardzo włażne powietrze po deszczu.",
+        "expected": "W lesie było bardzo wilgotne powietrze po deszczu."
+    },
+    {
+        "source": "W marcu śnieg zaczyna szybko tajać.",
+        "expected": "W marcu śnieg zaczyna szybko topnieć."
+    },
+    {
+        "source": "Po deszczu na niebie pojawił się piękny tęcza.",
+        "expected": "Po deszczu na niebie pojawiła się piękna tęcza."
+    },
+    {
+        "source": "Nie lubię lata, bo wtedy jest straszna żara.",
+        "expected": "Nie lubię lata, bo wtedy jest straszny upał."
+    },
+    {
+        "source": "Na niebie zebrały się czarne tucze.",
+        "expected": "Na niebie zebrały się czarne chmury."
+    },
+    {
+        "source": "W parku było pełno griazi.",
+        "expected": "W parku było pełno błota."
+    },
+    {
+        "source": "Dzieci bawią się na dworku, bo jest ciepło.",
+        "expected": "Dzieci bawią się na dworze, bo jest ciepło."
+    },
+    {
+        "source": "Dzisiejszy prognoz pogody obiecuje słońce.",
+        "expected": "Dzisiejsza prognoza pogody zapowiada słońce."
+    },
+    {
+        "source": "Termometr pokazuje dzisiaj ponad trzydzieści gradusów.",
+        "expected": "Termometr pokazuje dzisiaj ponad trzydzieści stopni."
+    },
+    {
+        "source": "Moim marzeniem jest zobaczyć polarne świecenie.",
+        "expected": "Moim marzeniem jest zobaczyć zorzę polarną."
+    },
+    {
+        "source": "Na drodze leżały ogromne sugroby śniegu.",
+        "expected": "Na drodze leżały ogromne zaspy śniegu."
+    },
+    {
+        "source": "Ukryliśmy się przed słońcem w głębokiej cieniu drzewa.",
+        "expected": "Ukryliśmy się przed słońcem w głębokim cieniu drzewa."
+    },
+    {
+        "source": "Nagle na niebie pojawiła się jasna mołnia.",
+        "expected": "Nagle na niebie pojawiła się jasna błyskawica."
+    },
+    {
+        "source": "Latem często jeździmy kąpać się w czystym ozierze.",
+        "expected": "Latem często jeździmy kąpać się w czystym jeziorze."
+    },
+    {
+        "source": "Chcę jechać na pociągu do Warszawy.",
+        "expected": "Chcę jechać pociągiem do Warszawy."
+    },
+    {
+        "source": "W tym roku będziemy odpoczywać na morzu.",
+        "expected": "W tym roku będziemy odpoczywać nad morzem."
+    },
+    {
+        "source": "Zabronowałem już pokój w hotelu.",
+        "expected": "Zarezerwowałem już pokój w hotelu."
+    },
+    {
+        "source": "Mój brat jedzie w urlop w przyszłym tygodniu.",
+        "expected": "Mój brat jedzie na urlop w przyszłym tygodniu."
+    },
+    {
+        "source": "To był bardzo ciekawy podróż.",
+        "expected": "To była bardzo ciekawa podróż."
+    },
+    {
+        "source": "Czekaliśmy pociągu przez dwie godziny.",
+        "expected": "Czekaliśmy na pociąg przez dwie godziny."
+    },
+    {
+        "source": "Bardzo boję się lecieć na samolocie.",
+        "expected": "Bardzo boję się lecieć samolotem."
+    },
+    {
+        "source": "Jutro idziemy na ekskursję po starym mieście.",
+        "expected": "Jutro idziemy na wycieczkę po starym mieście."
+    },
+    {
+        "source": "Moje wakacje szybko się skończyło.",
+        "expected": "Moje wakacje szybko się skończyły."
+    },
+    {
+        "source": "W przyszłym miesiącu jedziemy w Ukrainę.",
+        "expected": "W przyszłym miesiącu jedziemy do Ukrainy."
+    },
+    {
+        "source": "Ten plaża jest bardzo czysty i szeroki.",
+        "expected": "Ta plaża jest bardzo czysta i szeroka."
+    },
+    {
+        "source": "Przez cały dzień zwiedzaliśmy po muzeach.",
+        "expected": "Przez cały dzień zwiedzaliśmy muzea."
+    },
+    {
+        "source": "Musimy zdjąć pokój blisko morza.",
+        "expected": "Musimy wynająć pokój blisko morza."
+    },
+    {
+        "source": "Zdecydowaliśmy się jechać w góry na samochodzie.",
+        "expected": "Zdecydowaliśmy się jechać w góry samochodem."
+    },
+    {
+        "source": "Szukamy tani hotel w centrum miasta.",
+        "expected": "Szukamy taniego hotelu w centrum miasta."
+    },
+    {
+        "source": "Chciałbym podróżować całą Europą.",
+        "expected": "Chciałbym podróżować po całej Europie."
+    },
+    {
+        "source": "Kupiliśmy ładne suweniry dla naszych przyjaciół.",
+        "expected": "Kupiliśmy ładne pamiątki dla naszych przyjaciół."
+    },
+    {
+        "source": "Spędziliśmy dwa tygodnie u morza.",
+        "expected": "Spędziliśmy dwa tygodnie nad morzem."
+    },
+    {
+        "source": "Przywiozłem z wakacji piękną zagarę.",
+        "expected": "Przywiozłem z wakacji piękną opaleniznę."
+    },
+    {
+        "source": "Jestem bardzo zadowolony moim urlopem.",
+        "expected": "Jestem bardzo zadowolony z mojego urlopu."
+    },
+    {
+        "source": "W przyszłym roku planujemy polecieć na Cypr.",
+        "expected": "W przyszłym roku planujemy polecieć na Cypr."
+    },
+    {
+        "source": "Gdzie najlepiej kupić tanie bilety lotnicze?",
+        "expected": "Gdzie najlepiej kupić tanie bilety lotnicze?"
+    },
+    {
+        "source": "Nasza wycieczka w Tatry była naprawdę udana.",
+        "expected": "Nasza wycieczka w Tatry była naprawdę udana."
+    },
+    {
+        "source": "Wolę spędzać urlop aktywnie, jeżdżąc na rowerze.",
+        "expected": "Wolę spędzać urlop aktywnie, jeżdżąc na rowerze."
+    },
+    {
+        "source": "Czy możesz polecić jakiś dobry pensjonat blisko plaży?",
+        "expected": "Czy możesz polecić jakiś dobry pensjonat blisko plaży?"
+    },
+    {
+        "source": "Ja gram na tenisa w wolny czas.",
+        "expected": "Gram w tenisa w wolnym czasie."
+    },
+    {
+        "source": "Ja uprawiam sportem od dwóch lat.",
+        "expected": "Uprawiam sport od dwóch lat."
+    },
+    {
+        "source": "Lubię katować się na rowerze.",
+        "expected": "Lubię jeździć na rowerze."
+    },
+    {
+        "source": "Chodzę na bassejn w weekendy.",
+        "expected": "Chodzę na basen w weekendy."
+    },
+    {
+        "source": "Moje chobby to czytanie książek.",
+        "expected": "Moim hobby jest czytanie książek."
+    },
+    {
+        "source": "Lubię grać w komputerowe igry.",
+        "expected": "Lubię grać w gry komputerowe."
+    },
+    {
+        "source": "Chodzę w siłownię trzy razy w tygodniu.",
+        "expected": "Chodzę na siłownię trzy razy w tygodniu."
+    },
+    {
+        "source": "Zimą lubię jeździć na łyżach.",
+        "expected": "Zimą lubię jeździć na nartach."
+    },
+    {
+        "source": "Ja biegam każdy ranek.",
+        "expected": "Biegam codziennie rano."
+    },
+    {
+        "source": "Gram w szachach z moim przyjacielem.",
+        "expected": "Gram w szachy z moim przyjacielem."
+    },
+    {
+        "source": "Ja patrzę futbol po telewizorze.",
+        "expected": "Oglądam piłkę nożną w telewizji."
+    },
+    {
+        "source": "Trenuję trzy razy w tydzień.",
+        "expected": "Trenuję trzy razy w tygodniu."
+    },
+    {
+        "source": "Preferuję aktywny odpoczynek.",
+        "expected": "Preferuję aktywny wypoczynek."
+    },
+    {
+        "source": "Ja zbieram marki.",
+        "expected": "Zbieram znaczki."
+    },
+    {
+        "source": "Lubię risować krajobrazy.",
+        "expected": "Lubię rysować krajobrazy."
+    },
+    {
+        "source": "On jest dobry gracz.",
+        "expected": "On jest dobrym graczem."
+    },
+    {
+        "source": "Chodzę w las na spacer.",
+        "expected": "Chodzę do lasu na spacer."
+    },
+    {
+        "source": "Moja siostra zanimuje się jogą.",
+        "expected": "Moja siostra ćwiczy jogę."
+    },
+    {
+        "source": "Kupiłem nowe krosówki do biegania.",
+        "expected": "Kupiłem nowe buty sportowe do biegania."
+    },
+    {
+        "source": "My wygraliśmy w meczu.",
+        "expected": "Wygraliśmy mecz."
+    },
+    {
+        "source": "W wolnym czasie chętnie jeżdżę na rolkach.",
+        "expected": "W wolnym czasie chętnie jeżdżę na rolkach."
+    },
+    {
+        "source": "Mój brat interesuje się wspinaczką górską.",
+        "expected": "Mój brat interesuje się wspinaczką górską."
+    },
+    {
+        "source": "Czy chciałbyś pójść ze mną na basen w ten piątek?",
+        "expected": "Czy chciałbyś pójść ze mną na basen w ten piątek?"
+    },
+    {
+        "source": "Koszykówka to mój ulubiony sport zespołowy.",
+        "expected": "Koszykówka to mój ulubiony sport zespołowy."
+    },
+    {
+        "source": "Regularne ćwiczenia fizyczne poprawiają samopoczucie.",
+        "expected": "Regularne ćwiczenia fizyczne poprawiają samopoczucie."
+    },
+    {
+        "source": "Idzie deszcz, musimy wziąć parasol.",
+        "expected": "Pada deszcz, musimy wziąć parasol."
+    },
+    {
+        "source": "Na ulicy dzisiaj jest bardzo zimno i wieje silny wiatr.",
+        "expected": "Na dworze dzisiaj jest bardzo zimno i wieje silny wiatr."
+    },
+    {
+        "source": "Jesienią żółte listia spadają z drzew.",
+        "expected": "Jesienią żółte liście spadają z drzew."
+    },
+    {
+        "source": "Patrz, jaka piękna raduga na niebie!",
+        "expected": "Patrz, jaka piękna tęcza na niebie!"
+    },
+    {
+        "source": "W lesie rośnie dużo gribów po deszczu.",
+        "expected": "W lesie rośnie dużo grzybów po deszczu."
+    },
+    {
+        "source": "Zimoj często pada gęsty śnieg.",
+        "expected": "Zimą często pada gęsty śnieg."
+    },
+    {
+        "source": "Na niebie nie ma żadnej tuczy.",
+        "expected": "Na niebie nie ma żadnej chmury."
+    },
+    {
+        "source": "Woda w rece jest dzisiaj niezwykle czysta.",
+        "expected": "Woda w rzece jest dzisiaj niezwykle czysta."
+    },
+    {
+        "source": "Wiosnoj przyroda budzi się do życia.",
+        "expected": "Wiosną przyroda budzi się do życia."
+    },
+    {
+        "source": "Słyszałem, że jutro będzie groza z piorunami.",
+        "expected": "Słyszałem, że jutro będzie burza z piorunami."
+    },
+    {
+        "source": "Prognoz pogody zapowiada ocieplenie w przyszłym tygodniu.",
+        "expected": "Prognoza pogody zapowiada ocieplenie w przyszłym tygodniu."
+    },
+    {
+        "source": "Wieczorem na niebie pojawiły się pierwsze zwiazdy.",
+        "expected": "Wieczorem na niebie pojawiły się pierwsze gwiazdy."
+    },
+    {
+        "source": "Lubię gulić po lesie, kiedy świeci słońce.",
+        "expected": "Lubię spacerować po lesie, kiedy świeci słońce."
+    },
+    {
+        "source": "Ten derewo w naszym ogrodzie ma już sto lat.",
+        "expected": "To drzewo w naszym ogrodzie ma już sto lat."
+    },
+    {
+        "source": "W góry leży jeszcze dużo śniegu.",
+        "expected": "W górach leży jeszcze dużo śniegu."
+    },
+    {
+        "source": "Chcę popływać w jeziorze, ale woda jest zbyt chołodna.",
+        "expected": "Chcę popływać w jeziorze, ale woda jest zbyt zimna."
+    },
+    {
+        "source": "W prognozie obiecywali deszcz ze śniegiem.",
+        "expected": "W prognozie zapowiadali deszcz ze śniegiem."
+    },
+    {
+        "source": "Liście na drzewach stają się czerwone i żołte.",
+        "expected": "Liście na drzewach stają się czerwone i żółte."
+    },
+    {
+        "source": "Nad morzem wieje silny wiater.",
+        "expected": "Nad morzem wieje silny wiatr."
+    },
+    {
+        "source": "Klimat na ziemle szybko się zmienia.",
+        "expected": "Klimat na Ziemi szybko się zmienia."
+    },
+    {
+        "source": "Latem bardzo chętnie jeździmy nad polskie morze.",
+        "expected": "Latem bardzo chętnie jeździmy nad polskie morze."
+    },
+    {
+        "source": "Prognoza pogody na weekend jest bardzo obiecująca.",
+        "expected": "Prognoza pogody na weekend jest bardzo obiecująca."
+    },
+    {
+        "source": "Gęsta mgła rano utrudniała jazdę kierowcom.",
+        "expected": "Gęsta mgła rano utrudniała jazdę kierowcom."
+    },
+    {
+        "source": "Górskie powietrze zawsze dobrze wpływa na moje samopoczucie.",
+        "expected": "Górskie powietrze zawsze dobrze wpływa na moje samopoczucie."
+    },
+    {
+        "source": "Wiosną w ogrodzie rozkwitają pierwsze przebiśniegi.",
+        "expected": "Wiosną w ogrodzie rozkwitają pierwsze przebiśniegi."
+    },
+    {
+        "source": "Mieszkam na piątym piętru.",
+        "expected": "Mieszkam na piątym piętrze."
+    },
+    {
+        "source": "Chcę zdjąć dwupokojowe mieszkanie.",
+        "expected": "Chcę wynająć dwupokojowe mieszkanie."
+    },
+    {
+        "source": "Muszę płacić za komunałkę co miesiąc.",
+        "expected": "Muszę płacić za media co miesiąc."
+    },
+    {
+        "source": "Ta pokój jest bardzo jasna i przytulna.",
+        "expected": "Ten pokój jest bardzo jasny i przytulny."
+    },
+    {
+        "source": "Ta mebel jest bardzo nowoczesna.",
+        "expected": "Te meble są bardzo nowoczesne."
+    },
+    {
+        "source": "Lubię pić kawę w balkonie.",
+        "expected": "Lubię pić kawę na balkonie."
+    },
+    {
+        "source": "Muszę dzisiaj ubrać w pokoju.",
+        "expected": "Muszę dzisiaj posprzątać w pokoju."
+    },
+    {
+        "source": "Muszę wpłacić zastaw dla właściciela.",
+        "expected": "Muszę wpłacić kaucję właścicielowi."
+    },
+    {
+        "source": "W weekendzie będziemy malować ściany.",
+        "expected": "W weekend będziemy malować ściany."
+    },
+    {
+        "source": "Nie mamy jeszcze pralkę w łazience.",
+        "expected": "Nie mamy jeszcze pralki w łazience."
+    },
+    {
+        "source": "Chaziaj podniósł czynsz od nowego roku.",
+        "expected": "Właściciel podniósł czynsz od nowego roku."
+    },
+    {
+        "source": "Mieszkam na wynajętym mieszkaniu.",
+        "expected": "Mieszkam w wynajętym mieszkaniu."
+    },
+    {
+        "source": "Kto dzisiaj zmywa posudę?",
+        "expected": "Kto dzisiaj zmywa naczynia?"
+    },
+    {
+        "source": "Wejdź w mój pokój.",
+        "expected": "Wejdź do mojego pokoju."
+    },
+    {
+        "source": "Kupiliśmy nowy dywan do salonu, żeby na nim spać.",
+        "expected": "Kupiliśmy nową kanapę do salonu."
+    },
+    {
+        "source": "Nasze mieszkanie znajduje się na parteru.",
+        "expected": "Nasze mieszkanie znajduje się na parterze."
+    },
+    {
+        "source": "Szukam przytulne, jednopokojowe mieszkanie.",
+        "expected": "Szukam przytulnego, jednopokojowego mieszkania."
+    },
+    {
+        "source": "Podpisujemy umowę z poniedziałku.",
+        "expected": "Podpisujemy umowę od poniedziałku."
+    },
+    {
+        "source": "W tym mieszkaniu jest otoplenie gazowe.",
+        "expected": "W tym mieszkaniu jest ogrzewanie gazowe."
+    },
+    {
+        "source": "Musimy kupić nowy chołodylnik.",
+        "expected": "Musimy kupić nową lodówkę."
+    },
+    {
+        "source": "Czynsz za to mieszkanie wynosi dwa tysiące złotych miesięcznie.",
+        "expected": "Czynsz za to mieszkanie wynosi dwa tysiące złotych miesięcznie."
+    },
+    {
+        "source": "Szukamy jasnego pokoju jednoosobowego z dostępem do kuchni.",
+        "expected": "Szukamy jasnego pokoju jednoosobowego z dostępem do kuchni."
+    },
+    {
+        "source": "Właściciel mieszkania zgodził się na zwierzęta domowe.",
+        "expected": "Właściciel mieszkania zgodził się na zwierzęta domowe."
+    },
+    {
+        "source": "W łazience musimy wymienić uszkodzoną baterię prysznicową.",
+        "expected": "W łazience musimy wymienić uszkodzoną baterię prysznicową."
+    },
+    {
+        "source": "Umowa najmu została podpisana na okres dwunastu miesięcy.",
+        "expected": "Umowa najmu została podpisana na okres dwunastu miesięcy."
+    },
+    {
+        "source": "Muszę skaczać ten plik na dysk.",
+        "expected": "Muszę pobrać ten plik na dysk."
+    },
+    {
+        "source": "Pracuję w komputerze od samego rana.",
+        "expected": "Pracuję na komputerze od samego rana."
+    },
+    {
+        "source": "Mój stary laptop ciągle się wisie.",
+        "expected": "Mój stary laptop ciągle się zawiesza."
+    },
+    {
+        "source": "Znalazłem to rozwiązanie w internetu.",
+        "expected": "Znalazłem to rozwiązanie w internecie."
+    },
+    {
+        "source": "Ten nowy printer jest bardzo szybki.",
+        "expected": "Ta nowa drukarka jest bardzo szybka."
+    },
+    {
+        "source": "Musimy perezagruzić router, bo nie ma sygnału.",
+        "expected": "Musimy zresetować router, bo nie ma sygnału."
+    },
+    {
+        "source": "On jest świetnym programistem.",
+        "expected": "On jest świetnym programistą."
+    },
+    {
+        "source": "Zachowaj ten dokument przed wyłączeniem komputera.",
+        "expected": "Zapisz ten dokument przed wyłączeniem komputera."
+    },
+    {
+        "source": "Kliknij po tym linku, żeby przejść do strony.",
+        "expected": "Kliknij ten link, aby przejść do strony."
+    },
+    {
+        "source": "Muszę zariadować telefon, bo bateria jest razriadowana.",
+        "expected": "Muszę naładować telefon, bo bateria jest rozładowana."
+    },
+    {
+        "source": "Wysłałem tobie e-maila s załącznikiem.",
+        "expected": "Wysłałem ci e-maila z załącznikiem."
+    },
+    {
+        "source": "Ta aplikacja korzysta dużo pamięci RAM.",
+        "expected": "Ta aplikacja zużywa dużo pamięci RAM."
+    },
+    {
+        "source": "Musisz wprowadzić parol, żeby się zalogować.",
+        "expected": "Musisz wpisać hasło, aby się zalogować."
+    },
+    {
+        "source": "Używam dwa monitory do pracy.",
+        "expected": "Używam dwóch monitorów do pracy."
+    },
+    {
+        "source": "Gdzie mogę kupić tanią fleszkę?",
+        "expected": "Gdzie mogę kupić tani pendrive?"
+    },
+    {
+        "source": "On uczy się programowaniu od dwóch lat.",
+        "expected": "On uczy się programowania od dwóch lat."
+    },
+    {
+        "source": "Moja karta graficzna peregrewaje się podczas grania.",
+        "expected": "Moja karta graficzna przegrzewa się podczas grania."
+    },
+    {
+        "source": "Usunąłem tę papkę przez przypadek.",
+        "expected": "Usunąłem ten folder przez przypadek."
+    },
+    {
+        "source": "Musimy obnowić oprogramowanie.",
+        "expected": "Musimy zaktualizować oprogramowanie."
+    },
+    {
+        "source": "Ten program nie pracuje poprawnie.",
+        "expected": "Ten program nie działa poprawnie."
+    },
+    {
+        "source": "Nowy system operacyjny działa bardzo szybko i stabilnie.",
+        "expected": "Nowy system operacyjny działa bardzo szybko i stabilnie."
+    },
+    {
+        "source": "Czy możesz przesłać mi ten plik tekstowy jeszcze raz?",
+        "expected": "Czy możesz przesłać mi ten plik tekstowy jeszcze raz?"
+    },
+    {
+        "source": "Zawsze robię kopię zapasową swoich najważniejszych danych.",
+        "expected": "Zawsze robię kopię zapasową swoich najważniejszych danych."
+    },
+    {
+        "source": "Ten programista napisał bardzo czysty i przejrzysty kod.",
+        "expected": "Ten programista napisał bardzo czysty i przejrzysty kod."
+    },
+    {
+        "source": "Szybkie połączenie internetowe jest kluczowe do pracy zdalnej.",
+        "expected": "Szybkie połączenie internetowe jest kluczowe do pracy zdalnej."
+    },
+    {
+        "source": "Kupiłem w warzywniaku świeże owoce: ziemniaki, cebulę i kapustę.",
+        "expected": "Kupiłem w warzywniaku świeże warzywa: ziemniaki, cebulę i kapustę."
+    },
+    {
+        "source": "Idę do sklepu za chlebem i mlekiem.",
+        "expected": "Idę do sklepu po chleb i mleko."
+    },
+    {
+        "source": "W tym nowym magazynie obok domu są bardzo tanie jajka.",
+        "expected": "W tym nowym sklepie obok domu są bardzo tanie jajka."
+    },
+    {
+        "source": "Proszę zważyć ten cebula i te czerwone jabłka.",
+        "expected": "Proszę zważyć tę cebulę i te czerwone jabłka."
+    },
+    {
+        "source": "Czy mogę prosić o pakiet na zakupy, bo zapomniałem torby?",
+        "expected": "Czy mogę prosić o reklamówkę na zakupy, bo zapomniałem torby?"
+    },
+    {
+        "source": "Wczoraj w supermarkecie nie kupiłem świeży chleb.",
+        "expected": "Wczoraj w supermarkecie nie kupiłem świeżego chleba."
+    },
+    {
+        "source": "Pani w kasie nie wydała mi całą zdaczę.",
+        "expected": "Pani w kasie nie wydała mi całej reszty."
+    },
+    {
+        "source": "Kupiłam te słodycze na sklepie na rogu.",
+        "expected": "Kupiłam te słodycze w sklepie na rogu."
+    },
+    {
+        "source": "Musimy kupić ten świeży cukinia do sałatki.",
+        "expected": "Musimy kupić tę świeżą cukinię do sałatki."
+    },
+    {
+        "source": "Kup na rynku butelkę słonecznikowego masła.",
+        "expected": "Kup na rynku butelkę oleju słonecznikowego."
+    },
+    {
+        "source": "Chcę zapłacić za zakupy przez kartę.",
+        "expected": "Chcę zapłacić za zakupy kartą."
+    },
+    {
+        "source": "Muszę iść kupić produkty na obiad.",
+        "expected": "Muszę iść zrobić zakupy na obiad."
+    },
+    {
+        "source": "Kup dla mnie, proszę, dwie bułki i litr mleka.",
+        "expected": "Kup mi, proszę, dwie bułki i litr mleka."
+    },
+    {
+        "source": "Do barszczu potrzebna jest ta czerwona burak.",
+        "expected": "Do barszczu potrzebny jest ten czerwony burak."
+    },
+    {
+        "source": "Na Halloween kupiliśmy wielki arbuz, żeby zrobić z niego latarnię.",
+        "expected": "Na Halloween kupiliśmy wielką dynię, żeby zrobić z niej latarnię."
+    },
+    {
+        "source": "Kupiłem te parówki po promocji za pół ceny.",
+        "expected": "Kupiłem te parówki w promocji za pół ceny."
+    },
+    {
+        "source": "Dolej do kawy trochę tłustej śmietany.",
+        "expected": "Dolej do kawy trochę tłustej śmietanki."
+    },
+    {
+        "source": "W koszyku mamy pięć pomidor, dwa banany i chleb.",
+        "expected": "W koszyku mamy pięć pomidorów, dwa banany i chleb."
+    },
+    {
+        "source": "Zapomniałam portfela i musiałam zostawić zakupy na kasie.",
+        "expected": "Zapomniałam portfela i musiałam zostawić zakupy przy kasie."
+    },
+    {
+        "source": "Ta sprzedawca była bardzo miła i pomogła mi wybrać ser.",
+        "expected": "Ten sprzedawca był bardzo miły i pomógł mi wybrać ser."
+    },
+    {
+        "source": "Zróbmy dzisiaj wieczorem duże zakupy spożywcze na cały tydzień.",
+        "expected": "Zróbmy dzisiaj wieczorem duże zakupy spożywcze na cały tydzień."
+    },
+    {
+        "source": "Czy płaci pani gotówką, czy kartą płatniczą?",
+        "expected": "Czy płaci pani gotówką, czy kartą płatniczą?"
+    },
+    {
+        "source": "W tym małym osiedlowym sklepiku zawsze jest świeże pieczywo.",
+        "expected": "W tym małym osiedlowym sklepiku zawsze jest świeże pieczywo."
+    },
+    {
+        "source": "Muszę sprawdzić datę ważności na opakowaniu tego jogurtu.",
+        "expected": "Muszę sprawdzić datę ważności na opakowaniu tego jogurtu."
+    },
+    {
+        "source": "Proszę zapakować ten ser żółty i ukroić kawałek szynki.",
+        "expected": "Proszę zapakować ten ser żółty i ukroić kawałek szynki."
+    },
+    {
+        "source": "Na ulicy jest bardzo zimno i wieje silny wiatr.",
+        "expected": "Na dworze jest bardzo zimno i wieje silny wiatr."
+    },
+    {
+        "source": "Wyszliśmy na spacer pomimo deszczem.",
+        "expected": "Wyszliśmy na spacer mimo deszczu."
+    },
+    {
+        "source": "Solnce świeci bardzo mocno.",
+        "expected": "Słońce świeci bardzo mocno."
+    },
+    {
+        "source": "Ta głęboka cień chroni nas przed słońcem.",
+        "expected": "Ten głęboki cień chroni nas przed słońcem."
+    },
+    {
+        "source": "Jesienią żółte liście padają z drzew.",
+        "expected": "Jesienią żółte liście spadają z drzew."
+    },
+    {
+        "source": "Nie chcę zmoknąć pod deszczem.",
+        "expected": "Nie chcę zmoknąć na deszczu."
+    },
+    {
+        "source": "Po burzy na niebie pojawiła się piękna raduga.",
+        "expected": "Po burzy na niebie pojawiła się piękna tęcza."
+    },
+    {
+        "source": "Zimą jeziora szybko zamarzują.",
+        "expected": "Zimą jeziora szybko zamarzają."
+    },
+    {
+        "source": "Miesiąc świeci jasno w nocy.",
+        "expected": "Księżyc świeci jasno w nocy."
+    },
+    {
+        "source": "Wiosną na drzewach pojawiają się poczki.",
+        "expected": "Wiosną na drzewach pojawiają się pąki."
+    },
+    {
+        "source": "Dzieci boją się silny wiatr.",
+        "expected": "Dzieci boją się silnego wiatru."
+    },
+    {
+        "source": "Śnieg szybko taje na słońcu.",
+        "expected": "Śnieg szybko topnieje na słońcu."
+    },
+    {
+        "source": "Za takiej pogody wolę zostać w domu.",
+        "expected": "Przy takiej pogodzie wolę zostać w domu."
+    },
+    {
+        "source": "Gęsty mgła opadł na miasto.",
+        "expected": "Gęsta mgła opadła na miasto."
+    },
+    {
+        "source": "Zobaczyliśmy jasną mołnię na horyzoncie.",
+        "expected": "Zobaczyliśmy jasną błyskawicę na horyzoncie."
+    },
+    {
+        "source": "Jesienią zbieramy griby w lesie.",
+        "expected": "Jesienią zbieramy grzyby w lesie."
+    },
+    {
+        "source": "W parku rośnie wiele starych derew.",
+        "expected": "W parku rośnie wiele starych drzew."
+    },
+    {
+        "source": "Podczas ulewą schowaliśmy się pod dachem.",
+        "expected": "Podczas ulewy schowaliśmy się pod dachem."
+    },
+    {
+        "source": "Latem chętnie kąpiemy się w more.",
+        "expected": "Latem chętnie kąpiemy się w morzu."
+    },
+    {
+        "source": "Wieje zimny, siewierny wiatr.",
+        "expected": "Wieje zimny, północny wiatr."
+    },
+    {
+        "source": "Wiosną cała przyroda budzi się do życia.",
+        "expected": "Wiosną cała przyroda budzi się do życia."
+    },
+    {
+        "source": "Nad jeziorem unosi się lekka, poranna mgła.",
+        "expected": "Nad jeziorem unosi się lekka, poranna mgła."
+    },
+    {
+        "source": "Gwałtowna burza zniszczyła kilka drzew w parku.",
+        "expected": "Gwałtowna burza zniszczyła kilka drzew w parku."
+    },
+    {
+        "source": "Zimą dzieci chętnie lepią bałwana ze śniegu.",
+        "expected": "Zimą dzieci chętnie lepią bałwana ze śniegu."
+    },
+    {
+        "source": "Gorące słońce świeciło przez cały dzień.",
+        "expected": "Gorące słońce świeciło przez cały dzień."
+    },
+    {
+        "source": "Studiuję w uniwersytecie medycznym.",
+        "expected": "Studiuję na uniwersytecie medycznym."
+    },
+    {
+        "source": "W tym roku wstąpiłem na uniwersytet.",
+        "expected": "W tym roku dostałem się na uniwersytet."
+    },
+    {
+        "source": "Na wykładzie było tylko pięć studentów.",
+        "expected": "Na wykładzie było tylko pięciu studentów."
+    },
+    {
+        "source": "Połuczyłem piątkę z egzaminu z chemii.",
+        "expected": "Dostałem piątkę z egzaminu z chemii."
+    },
+    {
+        "source": "Muszę kupić nowy podręcznik po matematyce.",
+        "expected": "Muszę kupić nowy podręcznik do matematyki."
+    },
+    {
+        "source": "Uczę bardzo dużo przed sesją.",
+        "expected": "Uczę się bardzo dużo przed sesją."
+    },
+    {
+        "source": "Zdałem ten trudny egzamin z pierwszego razu.",
+        "expected": "Zdałem ten trudny egzamin za pierwszym razem."
+    },
+    {
+        "source": "Przepuściłem wczorajsze zajęcia z fizyki.",
+        "expected": "Opuściłem wczorajsze zajęcia z fizyki."
+    },
+    {
+        "source": "Znowu spóźniłem się na lekcji polskiego.",
+        "expected": "Znowu spóźniłem się na lekcję polskiego."
+    },
+    {
+        "source": "Ten wykład trwa półtora godziny.",
+        "expected": "Ten wykład trwa półtorej godziny."
+    },
+    {
+        "source": "Nie zdałem wczorajszy egzamin.",
+        "expected": "Nie zdałem wczorajszego egzaminu."
+    },
+    {
+        "source": "Czy mogę zadać panu profesorowi zapytanie?",
+        "expected": "Czy mogę zadać panu profesorowi pytanie?"
+    },
+    {
+        "source": "To zajęcie było bardzo interesujące.",
+        "expected": "Te zajęcia były bardzo interesujące."
+    },
+    {
+        "source": "Kupiłem nowy zeszyt dla języka polskiego.",
+        "expected": "Kupiłem nowy zeszyt do języka polskiego."
+    },
+    {
+        "source": "Nasz prepodawatel od historii jest bardzo wymagający.",
+        "expected": "Nasz wykładowca od historii jest bardzo wymagający."
+    },
+    {
+        "source": "Mój brat uczy się architekturę na politechnice.",
+        "expected": "Mój brat studiuje architekturę na politechnice."
+    },
+    {
+        "source": "Muszę oddać zaciotkę do dziekanatu.",
+        "expected": "Muszę oddać indeks do dziekanatu."
+    },
+    {
+        "source": "Pani dziekan podpisał moje podanie.",
+        "expected": "Pani dziekan podpisała moje podanie."
+    },
+    {
+        "source": "Dostałem maksymalną liczbę bałów z tego testu.",
+        "expected": "Dostałem maksymalną liczbę punktów z tego testu."
+    },
+    {
+        "source": "W przyszłym roku zakończę szkołę średnią.",
+        "expected": "W przyszłym roku kończę szkołę średnią."
+    },
+    {
+        "source": "W bibliotece uniwersyteckiej zawsze panuje cisza.",
+        "expected": "W bibliotece uniwersyteckiej zawsze panuje cisza."
+    },
+    {
+        "source": "Jutro rano piszemy kolokwium z mikroekonomii.",
+        "expected": "Jutro rano piszemy kolokwium z mikroekonomii."
+    },
+    {
+        "source": "Czy możesz pożyczyć mi swoje notatki z wykładu.",
+        "expected": "Czy możesz pożyczyć mi swoje notatki z wykładu."
+    },
+    {
+        "source": "Dziekanat jest czynny od poniedziałku do czwartku.",
+        "expected": "Dziekanat jest czynny od poniedziałku do czwartku."
+    },
+    {
+        "source": "Dzięki stypendium naukowemu mogłem kupić nowy komputer.",
+        "expected": "Dzięki stypendium naukowemu mogłem kupić nowy komputer."
+    },
+    {
+        "source": "Dzisiaj na ulicy jest bardzo zimno i wieje silny wiatr.",
+        "expected": "Dzisiaj na dworze jest bardzo zimno i wieje silny wiatr."
+    },
+    {
+        "source": "Patrz, jaka piękna raduga pojawiła się na niebie!",
+        "expected": "Patrz, jaka piękna tęcza pojawiła się na niebie!"
+    },
+    {
+        "source": "Jesienią liścia spadają z drzew i robi się szaro.",
+        "expected": "Jesienią liście spadają z drzew i robi się szaro."
+    },
+    {
+        "source": "Wczoraj cały dzień szedł deszcz i nie mogliśmy wyjść.",
+        "expected": "Wczoraj cały dzień padał deszcz i nie mogliśmy wyjść."
+    },
+    {
+        "source": "Wiosną cała priroda budzi się do życia.",
+        "expected": "Wiosną cała przyroda budzi się do życia."
+    },
+    {
+        "source": "Na niebie nie ma żadnej chmury, świeci jasne słonce.",
+        "expected": "Na niebie nie ma żadnej chmury, świeci jasne słońce."
+    },
+    {
+        "source": "Rano był taki silny tuman, że nic nie było widać.",
+        "expected": "Rano była taka silna mgła, że nic nie było widać."
+    },
+    {
+        "source": "Uwielbiam spacerować w lesie, kiedy jest ładna pogoda.",
+        "expected": "Uwielbiam spacerować po lesie, kiedy jest ładna pogoda."
+    },
+    {
+        "source": "Jutro obiecywali burzę z piorunami i gradem.",
+        "expected": "Na jutro zapowiadali burzę z piorunami i gradem."
+    },
+    {
+        "source": "Zimą często bywa mrozno i sypie gęsty śnieg.",
+        "expected": "Zimą często bywa mroźnie i sypie gęsty śnieg."
+    },
+    {
+        "source": "Popatrz na te góry, wierzchołki są pokryte ze śniegiem.",
+        "expected": "Popatrz na te góry, wierzchołki są pokryte śniegiem."
+    },
+    {
+        "source": "W wiosnę wszystko zaczyna zielenieć i kwitnąć.",
+        "expected": "Wiosną wszystko zaczyna zielenieć i kwitnąć."
+    },
+    {
+        "source": "Podczas burzy zobaczyliśmy ogromną błyskawkę.",
+        "expected": "Podczas burzy zobaczyliśmy ogromną błyskawicę."
+    },
+    {
+        "source": "Prognoza pogody mówi, że w weekend będzie ciepło.",
+        "expected": "Z prognozy pogody wynika, że w weekend będzie ciepło."
+    },
+    {
+        "source": "Nie lubię, kiedy na dworze jest griaź i kałuże.",
+        "expected": "Nie lubię, kiedy na dworze jest błoto i kałuże."
+    },
+    {
+        "source": "Słonce zaszło za chmurę i stało się chłodno.",
+        "expected": "Słońce zaszło za chmurę i zrobiło się chłodno."
+    },
+    {
+        "source": "Zwiezdy na niebie świecą bardzo jasno tej nocy.",
+        "expected": "Gwiazdy na niebie świecą bardzo jasno tej nocy."
+    },
+    {
+        "source": "W lesie rośnie dużo gribów i jagód.",
+        "expected": "W lesie rośnie dużo grzybów i jagód."
+    },
+    {
+        "source": "Rzeka wyszła z brzegów przez ulewę.",
+        "expected": "Rzeka wylała z brzegów przez ulewę."
+    },
+    {
+        "source": "Woda w rece jest bardzo zimna.",
+        "expected": "Woda w rzece jest bardzo zimna."
+    },
+    {
+        "source": "Jesienią często padają rzęsiste deszcze i wieje porywisty wiatr.",
+        "expected": "Jesienią często padają rzęsiste deszcze i wieje porywisty wiatr."
+    },
+    {
+        "source": "Nad ranem trawa w ogrodzie była pokryta lśniącą rosą.",
+        "expected": "Nad ranem trawa w ogrodzie była pokryta lśniącą rosą."
+    },
+    {
+        "source": "Górskie szczyty zimą wyglądają naprawdę majestatycznie.",
+        "expected": "Górskie szczyty zimą wyglądają naprawdę majestatycznie."
+    },
+    {
+        "source": "Po burzy na niebie pojawiła się piękna, wielobarwna tęcza.",
+        "expected": "Po burzy na niebie pojawiła się piękna, wielobarwna tęcza."
+    },
+    {
+        "source": "Wiosenne słońce szybko stopiło resztki brudnego śniegu.",
+        "expected": "Wiosenne słońce szybko stopiło resztki brudnego śniegu."
+    },
+    {
+        "source": "Chciałbym zakazać stolik na wieczór dla dwóch osób.",
+        "expected": "Chciałbym zamówić stolik na wieczór dla dwóch osób."
+    },
+    {
+        "source": "Ta recepta na ciasto jest bardzo prosta.",
+        "expected": "Ten przepis na ciasto jest bardzo prosty."
+    },
+    {
+        "source": "Moja mama spędza dużo czasu na kuchni.",
+        "expected": "Moja mama spędza dużo czasu w kuchni."
+    },
+    {
+        "source": "Ten gorący zup bardzo mi smakuje.",
+        "expected": "Ta gorąca zupa bardzo mi smakuje."
+    },
+    {
+        "source": "Kelner podał dla nas bardzo smaczny deser.",
+        "expected": "Kelner podał nam bardzo smaczny deser."
+    },
+    {
+        "source": "Kto dzisiaj pozmywa posudę po kolacji?",
+        "expected": "Kto dzisiaj pozmywa naczynia po kolacji?"
+    },
+    {
+        "source": "Co dzisiaj ugotujesz w obiad?",
+        "expected": "Co dzisiaj ugotujesz na obiad?"
+    },
+    {
+        "source": "Ten sałat z pomidorów jest bardzo świeży.",
+        "expected": "Ta sałatka z pomidorów jest bardzo świeża."
+    },
+    {
+        "source": "Ja bardzo smakuję tę pieczeń.",
+        "expected": "Bardzo smakuje mi ta pieczeń."
+    },
+    {
+        "source": "Muszę rozgrzać olej na skoworodzie.",
+        "expected": "Muszę rozgrzać olej na patelni."
+    },
+    {
+        "source": "To danie jest niezwykle wkusne.",
+        "expected": "To danie jest niezwykle smaczne."
+    },
+    {
+        "source": "Proszę przynieść szczot.",
+        "expected": "Proszę przynieść rachunek."
+    },
+    {
+        "source": "Ta widelca jest brudna, czy mogę prosić o nową?",
+        "expected": "Ten widelec jest brudny, czy mogę prosić o nowy?"
+    },
+    {
+        "source": "Lubię gotowić obiad dla całej rodziny.",
+        "expected": "Lubię gotować obiad dla całej rodziny."
+    },
+    {
+        "source": "Poproszę stakan wody z cytryną.",
+        "expected": "Poproszę szklankę wody z cytryną."
+    },
+    {
+        "source": "Zapłaciliśmy za kolacją kartą płatniczą.",
+        "expected": "Zapłaciliśmy za kolację kartą płatniczą."
+    },
+    {
+        "source": "W tym restaurancie podają świetne sushi.",
+        "expected": "W tej restauracji podają świetne sushi."
+    },
+    {
+        "source": "Chcę zapiec kurczaka w dufowce.",
+        "expected": "Chcę upiec kurczaka w piekarniku."
+    },
+    {
+        "source": "Zawsze jem jajecznicę dla śniadania.",
+        "expected": "Zawsze jem jajecznicę na śniadanie."
+    },
+    {
+        "source": "Oficjant szybko przyniósł nasze zamówienie.",
+        "expected": "Kelner szybko przyniósł nasze zamówienie."
+    },
+    {
+        "source": "Szef kuchni poleca dzisiaj świeżą rybę z pieca.",
+        "expected": "Szef kuchni poleca dzisiaj świeżą rybę z pieca."
+    },
+    {
+        "source": "Czy możecie państwo polecić jakieś dobre czerwone wino?",
+        "expected": "Czy możecie państwo polecić jakieś dobre czerwone wino?"
+    },
+    {
+        "source": "Zupa pomidorowa z makaronem to moje ulubione danie z dzieciństwa.",
+        "expected": "Zupa pomidorowa z makaronem to moje ulubione danie z dzieciństwa."
+    },
+    {
+        "source": "Zawsze rezerwujemy stolik z dużym wyprzedzeniem.",
+        "expected": "Zawsze rezerwujemy stolik z dużym wyprzedzeniem."
+    },
+    {
+        "source": "Kawiarnia na rogu ulicy serwuje najlepszą szarlotkę w mieście.",
+        "expected": "Kawiarnia na rogu ulicy serwuje najlepszą szarlotkę w mieście."
+    },
+    {
+        "source": "Mam nadzieję, że pomyślnie zdam rozmowę kwalifikacyjną.",
+        "expected": "Mam nadzieję, że pomyślnie przejdę rozmowę kwalifikacyjną."
+    },
+    {
+        "source": "Chciałbym otrzymać tą rabotę, ponieważ bardzo interesuje mnie ten projekt.",
+        "expected": "Chciałbym dostać tę pracę, ponieważ bardzo interesuje mnie ten projekt."
+    },
+    {
+        "source": "Na naszej firmie panuje bardzo przyjazna atmosfera.",
+        "expected": "W naszej firmie panuje bardzo przyjazna atmosfera."
+    },
+    {
+        "source": "Wczoraj odprawiłem swoje CV do kilku agencji rekrutacyjnych.",
+        "expected": "Wczoraj wysłałem swoje CV do kilku agencji rekrutacyjnych."
+    },
+    {
+        "source": "Obecnie szukam nową pracę w branży IT.",
+        "expected": "Obecnie szukam nowej pracy w branży IT."
+    },
+    {
+        "source": "Chciałbym dowiedzieć się, ile dni odpusku mi przysługuje.",
+        "expected": "Chciałbym dowiedzieć się, ile dni urlopu mi przysługuje."
+    },
+    {
+        "source": "Rozmowa rekrutacyjna będzie prowadzona na angielskim języku.",
+        "expected": "Rozmowa rekrutacyjna będzie prowadzona w języku angielskim."
+    },
+    {
+        "source": "Muszę otmienić nasze dzisiejsze spotkanie biznesowe.",
+        "expected": "Muszę odwołać nasze dzisiejsze spotkanie biznesowe."
+    },
+    {
+        "source": "Nasz biuro znajduje się w samym centrum Warszawy.",
+        "expected": "Nasze biuro znajduje się w samym centrum Warszawy."
+    },
+    {
+        "source": "Muszę pilnie zadzwonić klientowi i wyjaśnić tę sytuację.",
+        "expected": "Muszę pilnie zadzwonić do klienta i wyjaśnić tę sytuację."
+    },
+    {
+        "source": "Ta praca trebuje dużego doświadczenia w zarządzaniu projektami.",
+        "expected": "Ta praca wymaga dużego doświadczenia w zarządzaniu projektami."
+    },
+    {
+        "source": "Spędzam osiem godzin dziennie, pracując za komputerem.",
+        "expected": "Spędzam osiem godzin dziennie, pracując przy komputerze."
+    },
+    {
+        "source": "Szef przedłożył mi awans i podwyżkę.",
+        "expected": "Szef zaproponował mi awans i podwyżkę."
+    },
+    {
+        "source": "Muszę zapytać u szefa o zgodę na pracę zdalną.",
+        "expected": "Muszę zapytać szefa o zgodę na pracę zdalną."
+    },
+    {
+        "source": "Moje pierwsze sobesedowanie poszło bardzo dobrze.",
+        "expected": "Moje pierwsze spotkanie rekrutacyjne poszło bardzo dobrze."
+    },
+    {
+        "source": "Nie lubię pracować na weekendach, bo wtedy odpoczywam.",
+        "expected": "Nie lubię pracować w weekendy, bo wtedy odpoczywam."
+    },
+    {
+        "source": "Chcielibyśmy zakluczyć z panem umowę o pracę na czas nieokreślony.",
+        "expected": "Chcielibyśmy zawrzeć z panem umowę o pracę na czas nieokreślony."
+    },
+    {
+        "source": "Chciałbym pogratulować panu z sukcesem i nowym stanowiskiem.",
+        "expected": "Chciałbym pogratulować panu sukcesu i nowego stanowiska."
+    },
+    {
+        "source": "Muszę przygotować miesięczny otczet finansowy dla zarządu.",
+        "expected": "Muszę przygotować miesięczny raport finansowy dla zarządu."
+    },
+    {
+        "source": "Ta doświadczona specjalista ds. HR zadała mi trudne pytania.",
+        "expected": "Ten doświadczony specjalista ds. HR zadał mi trudne pytania."
+    },
+    {
+        "source": "Wysłałem swoje zgłoszenie i teraz czekam na odpowiedź od rekrutera.",
+        "expected": "Wysłałem swoje zgłoszenie i teraz czekam na odpowiedź od rekrutera."
+    },
+    {
+        "source": "Czy mógłby pan szczegółowo opisać zakres moich przyszłych obowiązków?",
+        "expected": "Czy mógłby pan szczegółowo opisać zakres moich przyszłych obowiązków?"
+    },
+    {
+        "source": "Nasza firma oferuje stabilne zatrudnienie oraz prywatną opiekę medyczną.",
+        "expected": "Nasza firma oferuje stabilne zatrudnienie oraz prywatną opiekę medyczną."
+    },
+    {
+        "source": "Praca w tym zespole pozwala mi rozwijać umiejętności twarde i miękkie.",
+        "expected": "Praca w tym zespole pozwala mi rozwijać umiejętności twarde i miękkie."
+    },
+    {
+        "source": "Przed rozmową kwalifikacyjną warto dokładnie zapoznać się z profilem działalności firmy.",
+        "expected": "Przed rozmową kwalifikacyjną warto dokładnie zapoznać się z profilem działalności firmy."
+    }
+]
