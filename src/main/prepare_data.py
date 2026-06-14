@@ -21,7 +21,7 @@ from src.utils.paths import (
     POLIMORF_PARQUET_PATH,
     UNIFIED_FF_PATH,
     GENDER_MISMATCH_PATH,
-    HUMAN_EVAL_PATH,
+    OOD_EVAL_PATH,
     PREP_MISMATCH_PATH,
     SYNTHETIC_TRAIN_PATH,
     SYNTHETIC_VAL_PATH,
@@ -148,11 +148,11 @@ def main() -> None:
     else:
         logging.info("Preposition mismatches already generated.")
 
-    if not os.path.exists(HUMAN_EVAL_PATH):
+    if not os.path.exists(OOD_EVAL_PATH):
         logging.info("Generating external validation dataset...")
         generate_human_eval_main()
-        if not os.path.exists(HUMAN_EVAL_PATH):
-            raise RuntimeError(f"Pipeline failure: Failed to generate {HUMAN_EVAL_PATH}")
+        if not os.path.exists(OOD_EVAL_PATH):
+            raise RuntimeError(f"Pipeline failure: Failed to generate {OOD_EVAL_PATH}")
     else:
         logging.info("External validation dataset already exists.")
 

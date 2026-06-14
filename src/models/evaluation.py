@@ -274,13 +274,13 @@ class FluencyReranker:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def compute_pll(self, sentence: str) -> float:
-        """Computes the Pseudo-Log-Likelihood score of a sentence in a single batch pass.
+        """Computes the length-normalized Pseudo-Log-Likelihood score of a sentence in a single batch pass.
 
         Args:
             sentence: The input sentence to score.
 
         Returns:
-            The computed pseudo-log-likelihood score.
+            The computed length-normalized pseudo-log-likelihood score.
         """
         enc = self.tokenizer(sentence, return_tensors="pt")
         input_ids = enc["input_ids"][0]
@@ -307,7 +307,97 @@ class FluencyReranker:
         for row_idx, col_idx in enumerate(mask_indices):
             target_token_id = input_ids[col_idx].item()
             total_pll += log_probs[row_idx, col_idx, target_token_id].item()
-        return total_pll
+        
+        # NORMALIZATION: Average logprob per token
+        return total_pll / len(mask_indices)
+
+    def compute_pll_batch(self, sentences: List[str]) -> List[float]:
+        """Computes the length-normalized Pseudo-Log-Likelihood score of a list of sentences in parallel batches.
+
+        Args:
+            sentences: A list of sentences to score.
+
+        Returns:
+            A list of length-normalized pseudo-log-likelihood scores.
+        """
+        if not sentences:
+            return []
+
+        flat_input_ids = []
+        flat_attention_mask = []
+        flat_target_ids = []
+        flat_mask_positions = []
+        
+        sentence_offsets = []
+        current_offset = 0
+
+        special_tokens = {
+            self.tokenizer.cls_token_id,
+            self.tokenizer.sep_token_id,
+            self.tokenizer.pad_token_id,
+        }
+
+        for sentence in sentences:
+            enc = self.tokenizer(sentence, return_tensors="pt")
+            input_ids = enc["input_ids"][0]
+            attn_mask = enc["attention_mask"][0]
+            seq_len = len(input_ids)
+
+            mask_indices = [
+                i for i in range(seq_len) if input_ids[i].item() not in special_tokens
+            ]
+
+            if not mask_indices:
+                sentence_offsets.append((current_offset, current_offset))
+                continue
+
+            sentence_offsets.append((current_offset, current_offset + len(mask_indices)))
+            current_offset += len(mask_indices)
+
+            for col_idx in mask_indices:
+                masked_ids = input_ids.clone()
+                masked_ids[col_idx] = self.tokenizer.mask_token_id
+                
+                flat_input_ids.append(masked_ids)
+                flat_attention_mask.append(attn_mask)
+                flat_target_ids.append(input_ids[col_idx].item())
+                flat_mask_positions.append(col_idx)
+
+        if not flat_input_ids:
+            return [0.0] * len(sentences)
+
+        from torch.nn.utils.rnn import pad_sequence
+        batch_input_ids = pad_sequence(flat_input_ids, batch_first=True, padding_value=self.tokenizer.pad_token_id).to(self.device)
+        batch_attn_mask = pad_sequence(flat_attention_mask, batch_first=True, padding_value=0).to(self.device)
+
+        flat_log_probs = []
+        sub_batch_size = 128
+
+        with torch.inference_mode():
+            for start_idx in range(0, len(flat_input_ids), sub_batch_size):
+                sub_input_ids = batch_input_ids[start_idx : start_idx + sub_batch_size]
+                sub_attn_mask = batch_attn_mask[start_idx : start_idx + sub_batch_size]
+                
+                outputs = self.model(input_ids=sub_input_ids, attention_mask=sub_attn_mask)
+                logits = outputs.logits
+                log_probs = torch.log_softmax(logits, dim=-1)
+                
+                for offset_idx in range(logits.shape[0]):
+                    global_idx = start_idx + offset_idx
+                    col_idx = flat_mask_positions[global_idx]
+                    target_token_id = flat_target_ids[global_idx]
+                    prob = log_probs[offset_idx, col_idx, target_token_id].item()
+                    flat_log_probs.append(prob)
+
+        results = []
+        for idx, (start, end) in enumerate(sentence_offsets):
+            if start == end:
+                results.append(0.0)
+            else:
+                sentence_log_probs = flat_log_probs[start:end]
+                # Length-normalized average log-probability
+                results.append(sum(sentence_log_probs) / len(sentence_log_probs))
+        return results
 
     def rerank(self, source: str, candidates: List[str], threshold: float = 0.0) -> str:
         """Selects the candidate that improves fluency above a given threshold relative to the source.
@@ -333,6 +423,48 @@ class FluencyReranker:
                 best_pll = cand_pll
                 best_cand = cand
         return best_cand
+
+    def rerank_batch(self, sources: List[str], candidates_list: List[List[str]], threshold: float = 0.0) -> List[str]:
+        """Reranks candidates for a batch of sources in a parallel/batched way.
+
+        Args:
+            sources: A list of original input sentences.
+            candidates_list: A list of lists of candidate sentences.
+            threshold: Minimum relative improvement required to swap.
+
+        Returns:
+            A list of selected candidate strings.
+        """
+        all_sentences = []
+        sentence_to_idx = {}
+
+        def add_sentence(s):
+            if s not in sentence_to_idx:
+                sentence_to_idx[s] = len(all_sentences)
+                all_sentences.append(s)
+
+        for src, cands in zip(sources, candidates_list):
+            add_sentence(src)
+            for cand in cands:
+                add_sentence(cand)
+
+        pllls = self.compute_pll_batch(all_sentences)
+
+        results = []
+        for src, cands in zip(sources, candidates_list):
+            src_pll = pllls[sentence_to_idx[src]]
+            best_cand = src
+            best_pll = src_pll
+
+            for cand in set(cands):
+                if cand.strip() == src.strip():
+                    continue
+                cand_pll = pllls[sentence_to_idx[cand]]
+                if cand_pll > best_pll + threshold:
+                    best_pll = cand_pll
+                    best_cand = cand
+            results.append(best_cand)
+        return results
 
 
 def generate_predictions(
@@ -439,17 +571,21 @@ def generate_predictions(
                 if reranker is not None:
                     # apply fluency filtering to batch predictions
                     effective_beams = num_beams if num_beams > 1 else 1
+                    batch_sources = []
+                    batch_cands_list = []
                     for batch_item_idx, item in enumerate(batch_data):
-                        source_text = item["source"]
+                        batch_sources.append(item["source"])
                         cands = pred_texts[
                             batch_item_idx
                             * effective_beams : (batch_item_idx + 1)
                             * effective_beams
                         ]
-                        best_cand = reranker.rerank(
-                            source_text, cands, threshold=config.reranking_threshold
-                        )
-                        all_preds.append(best_cand)
+                        batch_cands_list.append(cands)
+                    
+                    best_cands = reranker.rerank_batch(
+                        batch_sources, batch_cands_list, threshold=config.reranking_threshold
+                    )
+                    all_preds.extend(best_cands)
                 else:
                     all_preds.extend(pred_texts)
 

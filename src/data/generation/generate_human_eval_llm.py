@@ -9,7 +9,7 @@ import random
 import time
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
-from src.utils.paths import HUMAN_EVAL_PATH
+from src.utils.paths import OOD_EVAL_PATH
 from src.utils.llm_client import ask_llm
 
 load_dotenv()
@@ -134,18 +134,18 @@ def fetch_eval_sentences(
 
 def main() -> None:
     """Generates the external validation dataset and saves it to a file."""
-    if os.path.exists(HUMAN_EVAL_PATH):
+    if os.path.exists(OOD_EVAL_PATH):
         logging.info(
-            f"External validation dataset already exists at {HUMAN_EVAL_PATH}. Skipping generation."
+            f"External validation dataset already exists at {OOD_EVAL_PATH}. Skipping generation."
         )
         return
     generated_data = fetch_eval_sentences()
     if generated_data:
-        os.makedirs(os.path.dirname(HUMAN_EVAL_PATH), exist_ok=True)
-        with open(HUMAN_EVAL_PATH, "w", encoding="utf-8") as f:
+        os.makedirs(os.path.dirname(OOD_EVAL_PATH), exist_ok=True)
+        with open(OOD_EVAL_PATH, "w", encoding="utf-8") as f:
             json.dump(generated_data, f, ensure_ascii=False, indent=4)
         logging.info(
-            f"Successfully generated {len(generated_data)} external validation sentences to {HUMAN_EVAL_PATH}."
+            f"Successfully generated {len(generated_data)} external validation sentences to {OOD_EVAL_PATH}."
         )
     else:
         raise RuntimeError(

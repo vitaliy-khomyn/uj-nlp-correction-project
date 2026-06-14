@@ -22,7 +22,7 @@ from transformers import (
 from peft import get_peft_model, LoraConfig, TaskType, PeftModel
 
 from src.config import config
-from src.utils.paths import HUMAN_EVAL_PATH
+from src.utils.paths import OOD_EVAL_PATH
 from src.data.dataset import prepare_and_load_dataset, pivot_to_seq2seq
 from src.models.evaluation import (
     generate_predictions, 
@@ -82,7 +82,7 @@ def run_evaluation_flow(
     reranked_preds_path = os.path.join(out_dir, "human_preds_reranked.json")
     
     # load gold OOD evaluation set
-    with open(HUMAN_EVAL_PATH, "r", encoding="utf-8") as f:
+    with open(OOD_EVAL_PATH, "r", encoding="utf-8") as f:
         human_std = json.load(f)
         
     if config.debug_mode:
@@ -141,7 +141,7 @@ def run_evaluation_flow(
                 
             with open(reranked_preds_path, "w", encoding="utf-8") as f:
                 json.dump(reranked_predictions, f, ensure_ascii=False, indent=2)
-    
+
     # Calculate metrics
     # Load whatever predictions are available
     metrics = {"out_dir": out_dir, "HF_Eval": {}}
@@ -156,12 +156,12 @@ def run_evaluation_flow(
             preds
         )
         metrics.update({
-            "Human_EM": em_score,
-            "Human_F05": f05_score,
-            "Human_BERTScore": avg_bertscore,
-            "Human_TPR": tpr,
-            "Human_FPR": fpr,
-            "Human_FNR": fnr
+            "OOD_EM": em_score,
+            "OOD_F05": f05_score,
+            "OOD_BERTScore": avg_bertscore,
+            "OOD_TPR": tpr,
+            "OOD_FPR": fpr,
+            "OOD_FNR": fnr
         })
         
     # If the pipeline itself is reranked, also load and evaluate the reranked metrics as primary
@@ -175,12 +175,12 @@ def run_evaluation_flow(
             preds_rr
         )
         metrics.update({
-            "Human_EM": em_score_rr,
-            "Human_F05": f05_score_rr,
-            "Human_BERTScore": avg_bertscore_rr,
-            "Human_TPR": tpr_rr,
-            "Human_FPR": fpr_rr,
-            "Human_FNR": fnr_rr
+            "OOD_EM": em_score_rr,
+            "OOD_F05": f05_score_rr,
+            "OOD_BERTScore": avg_bertscore_rr,
+            "OOD_TPR": tpr_rr,
+            "OOD_FPR": fpr_rr,
+            "OOD_FNR": fnr_rr
         })
         
     return metrics

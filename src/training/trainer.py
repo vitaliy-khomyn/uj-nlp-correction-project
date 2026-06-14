@@ -79,29 +79,39 @@ class CustomORPOTrainer(Seq2SeqTrainer):
     def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         # inputs contains: input_ids, attention_mask, chosen_labels, rejected_labels, is_error
         
-        # 1. Forward pass for chosen sequence (standard SFT step)
-        chosen_outputs = model(
+        # 1. Run the encoder once to avoid redundant computations (50% speedup & VRAM saving)
+        base_model = model.base_model.model if hasattr(model, "base_model") else model
+        encoder = base_model.get_encoder()
+        encoder_outputs = encoder(
             input_ids=inputs["input_ids"],
             attention_mask=inputs["attention_mask"],
-            labels=inputs["chosen_labels"]
+            return_dict=True
+        )
+        
+        # 2. Chosen sequence pass (decoder-only forward)
+        chosen_outputs = model(
+            encoder_outputs=encoder_outputs,
+            attention_mask=inputs["attention_mask"],
+            labels=inputs["chosen_labels"],
+            return_dict=True
         )
         sft_loss = chosen_outputs.loss
         chosen_logits = chosen_outputs.logits
         
-        # 2. Forward pass for rejected sequence
-        with torch.no_grad():
-            rejected_outputs = model(
-                input_ids=inputs["input_ids"],
-                attention_mask=inputs["attention_mask"],
-                labels=inputs["rejected_labels"]
-            )
-            rejected_logits = rejected_outputs.logits
+        # 3. Rejected sequence pass (decoder-only forward with gradients)
+        rejected_outputs = model(
+            encoder_outputs=encoder_outputs,
+            attention_mask=inputs["attention_mask"],
+            labels=inputs["rejected_labels"],
+            return_dict=True
+        )
+        rejected_logits = rejected_outputs.logits
             
-        # 3. Compute length-normalized log-probabilities
+        # 4. Compute length-normalized log-probabilities
         chosen_logps = get_batch_logps(chosen_logits, inputs["chosen_labels"])
         rejected_logps = get_batch_logps(rejected_logits, inputs["rejected_labels"])
         
-        # 4. Compute ORPO odds ratio loss with Identity Mask
+        # 5. Compute ORPO odds ratio loss with Identity Mask
         log_odds = chosen_logps - rejected_logps
         log_sigmoid_odds = torch.log(torch.sigmoid(log_odds) + 1e-8)
         

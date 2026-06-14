@@ -55,7 +55,7 @@ class ProjectConfig:
     # reranking configuration
     use_reranking: bool = False
     reranking_model_name: str = "dkleczek/bert-base-polish-cased-v1"
-    reranking_threshold: float = 0.0
+    reranking_threshold: float = 0.05
 
     # training hyperparameters
     train_batch_size: int = 8

@@ -17,7 +17,7 @@ POLIMORF_PARQUET_PATH: str = os.path.join(GENERATED_DIR, "polimorf.parquet")
 UNIFIED_FF_PATH: str = os.path.join(SCRAPED_DIR, "unified_false_friends.json")
 GENDER_MISMATCH_PATH: str = os.path.join(GENERATED_DIR, "gender_mismatches.json")
 PREP_MISMATCH_PATH: str = os.path.join(GENERATED_DIR, "preposition_mismatches_llm.json")
-HUMAN_EVAL_PATH: str = os.path.join(EVAL_DIR, "authentic_human_eval.json")
+OOD_EVAL_PATH: str = os.path.join(EVAL_DIR, "authentic_ood_eval.json")
 
 SYNTHETIC_TRAIN_PATH: str = os.path.join(SYNTHESIZED_DIR, "synthetic_train.parquet")
 SYNTHETIC_VAL_PATH: str = os.path.join(SYNTHESIZED_DIR, "synthetic_val.parquet")

@@ -1,4 +1,4 @@
-"""Script to analyze the generated authentic_human_eval.json dataset."""
+"""Script to analyze the generated authentic_ood_eval.json dataset."""
 import os
 import sys
 import json
@@ -6,18 +6,18 @@ import logging
 from collections import Counter
 
 sys.path.append(os.path.abspath('.'))
-from src.utils.paths import HUMAN_EVAL_PATH
+from src.utils.paths import OOD_EVAL_PATH
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 
 def main() -> None:
     """Analyzes the generated external validation dataset for duplicates and statistics."""
-    if not os.path.exists(HUMAN_EVAL_PATH):
-        logging.error(f"Dataset not found at {HUMAN_EVAL_PATH}. Run prepare_data.py first.")
+    if not os.path.exists(OOD_EVAL_PATH):
+        logging.error(f"Dataset not found at {OOD_EVAL_PATH}. Run prepare_data.py first.")
         return
 
-    with open(HUMAN_EVAL_PATH, 'r', encoding='utf-8') as f:
+    with open(OOD_EVAL_PATH, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     total = len(data)

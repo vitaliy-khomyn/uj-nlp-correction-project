@@ -122,29 +122,60 @@ def render_categorized_metrics_table(final_results: Dict[str, Any], gold_srcs: L
         if not os.path.exists(out_dir) and "results/small/" in out_dir:
             out_dir = out_dir.replace("results/small/", "results-small/")
             
-        # 1. un-reranked prediction evaluation
-        preds_path = os.path.join(out_dir, "human_preds.json")
-        if os.path.exists(preds_path):
-            try:
-                with open(preds_path, "r", encoding="utf-8") as f:
-                    preds = json.load(f)
-                cat_metrics = get_categorized_metrics(gold_srcs[:len(preds)], gold_exps[:len(preds)], preds)
-                add_row(exp_name, cat_metrics)
-            except Exception:
-                pass
-                
-        # 2. reranked prediction evaluation (Herbert Rank Rematching)
-        reranked_preds_path = os.path.join(out_dir, "human_preds_reranked.json")
-        if os.path.exists(reranked_preds_path):
-            try:
-                with open(reranked_preds_path, "r", encoding="utf-8") as f:
-                    preds = json.load(f)
-                cat_metrics = get_categorized_metrics(gold_srcs[:len(preds)], gold_exps[:len(preds)], preds)
-                add_row(f"{exp_name} + Herbert Rerank", cat_metrics)
-            except Exception:
-                pass
+        is_base = "plt5-base" in exp_name
+        is_rerank_exp = "Rerank" in exp_name
 
-    cat_df = pd.DataFrame(categorized_table_data)
+        # 1. un-reranked prediction evaluation (skip if it is a dedicated base reranking experiment)
+        if not (is_base and is_rerank_exp):
+            preds_path = os.path.join(out_dir, "human_preds.json")
+            if os.path.exists(preds_path):
+                try:
+                    with open(preds_path, "r", encoding="utf-8") as f:
+                        preds = json.load(f)
+                    cat_metrics = get_categorized_metrics(gold_srcs[:len(preds)], gold_exps[:len(preds)], preds)
+                    display_name = exp_name
+                    if " + Rerank" in display_name:
+                        display_name = display_name.replace(" + Rerank", " (Greedy)")
+                    elif " + Herbert Rerank" in display_name:
+                        display_name = display_name.replace(" + Herbert Rerank", " (Greedy)")
+                    add_row(display_name, cat_metrics)
+                except Exception:
+                    pass
+                
+        # 2. reranked prediction evaluation (skip if it is a base greedy-only SFT experiment)
+        if not (is_base and not is_rerank_exp):
+            reranked_preds_path = os.path.join(out_dir, "human_preds_reranked.json")
+            if os.path.exists(reranked_preds_path):
+                try:
+                    with open(reranked_preds_path, "r", encoding="utf-8") as f:
+                        preds = json.load(f)
+                    cat_metrics = get_categorized_metrics(gold_srcs[:len(preds)], gold_exps[:len(preds)], preds)
+                    display_name = exp_name
+                    if "Rerank" not in display_name and "HerBERT" not in display_name:
+                        display_name = f"{display_name} + Herbert Rerank"
+                    add_row(display_name, cat_metrics)
+                except Exception:
+                    pass
+
+    # Deduplicate categorized_table_data based on metric values signature to prune identical evaluations
+    seen_signatures = set()
+    deduplicated_data = []
+    for row in categorized_table_data:
+        sig = (
+            round(row["Prep (TPR)"], 6),
+            round(row["False friend (TPR)"], 6),
+            round(row["Gender (TPR)"], 6),
+            round(row["Case (TPR)"], 6),
+            round(row["Typos (TPR)"], 6),
+            round(row["Other (TPR)"], 6),
+            round(row["Identity (FPR)"], 6)
+        )
+        if sig in seen_signatures and row["Wariant"] != "Baseline (Do-Nothing)":
+            continue
+        seen_signatures.add(sig)
+        deduplicated_data.append(row)
+
+    cat_df = pd.DataFrame(deduplicated_data)
     display(HTML("<h3>Szczegółowa Ewaluacja Kategorii Błędów</h3>"))
     display(cat_df.style.format({
         "Prep (TPR)": "{:.2%}",
@@ -369,20 +400,20 @@ def plot_categorized_metrics_comparison(final_results: Dict[str, Any], gold_srcs
         "identity": "Identity (FPR)"
     }
 
-    # 1. Collect all models and their predictions
-    model_preds = []
+    # 1. Collect all candidate evaluations (label, predictions, is_reranked)
+    candidates = []
 
-    # Add Baseline (Do-Nothing)
-    model_preds.append(("Baseline", gold_srcs, None))
+    # Baseline (Do-Nothing)
+    candidates.append(("Baseline", gold_srcs, False))
 
-    # Add rule-based baseline reranked if it exists
+    # Baseline+HerBERT
     baseline_rr_dir = "./results/base/baseline_rules_reranked"
     baseline_rr_path = os.path.join(baseline_rr_dir, "human_preds_reranked.json")
     if os.path.exists(baseline_rr_path):
         try:
             with open(baseline_rr_path, "r", encoding="utf-8") as f:
                 baseline_rr_preds = json.load(f)
-            model_preds.append(("Baseline+HerBERT", None, baseline_rr_preds))
+            candidates.append(("Baseline+HerBERT", baseline_rr_preds, True))
         except Exception:
             pass
 
@@ -412,27 +443,54 @@ def plot_categorized_metrics_comparison(final_results: Dict[str, Any], gold_srcs
         if not os.path.exists(out_dir) and "results/small/" in out_dir:
             out_dir = out_dir.replace("results/small/", "results-small/")
 
-        preds_reg = None
-        preds_path = os.path.join(out_dir, "human_preds.json")
-        if os.path.exists(preds_path):
-            try:
-                with open(preds_path, "r", encoding="utf-8") as f:
-                    preds_reg = json.load(f)
-            except Exception:
-                pass
+        is_base = "plt5-base" in exp_name
+        is_rerank_exp = "Rerank" in exp_name
 
-        preds_rr = None
-        preds_rr_path = os.path.join(out_dir, "human_preds_reranked.json")
-        if os.path.exists(preds_rr_path):
-            try:
-                with open(preds_rr_path, "r", encoding="utf-8") as f:
-                    preds_rr = json.load(f)
-            except Exception:
-                pass
+        # 1. un-reranked predictions
+        if not (is_base and is_rerank_exp):
+            preds_path = os.path.join(out_dir, "human_preds.json")
+            if os.path.exists(preds_path):
+                try:
+                    with open(preds_path, "r", encoding="utf-8") as f:
+                        preds_reg = json.load(f)
+                    short_name = shorten_name(exp_name)
+                    candidates.append((short_name, preds_reg, False))
+                except Exception:
+                    pass
 
-        if preds_reg is not None or preds_rr is not None:
-            short_name = shorten_name(exp_name)
-            model_preds.append((short_name, preds_reg, preds_rr))
+        # 2. reranked predictions
+        if not (is_base and not is_rerank_exp):
+            preds_rr_path = os.path.join(out_dir, "human_preds_reranked.json")
+            if os.path.exists(preds_rr_path):
+                try:
+                    with open(preds_rr_path, "r", encoding="utf-8") as f:
+                        preds_rr = json.load(f)
+                    short_name = shorten_name(exp_name)
+                    if "Rerank" not in short_name and "HerBERT" not in short_name:
+                        short_name = f"{short_name}+RR"
+                    candidates.append((short_name, preds_rr, True))
+                except Exception:
+                    pass
+
+    # Deduplicate candidates by their metric values signature (exact match to table)
+    seen_signatures = set()
+    deduplicated_candidates = []
+    
+    for label, preds, is_rr in candidates:
+        cat_metrics = get_categorized_metrics(gold_srcs[:len(preds)], gold_exps[:len(preds)], preds)
+        sig = (
+            round(cat_metrics.get("prep", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("false_friend", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("gender", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("case", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("typos", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("other", {}).get("tpr", 0.0), 6),
+            round(cat_metrics.get("identity", {}).get("fpr", 0.0), 6)
+        )
+        if sig in seen_signatures and label != "Baseline":
+            continue
+        seen_signatures.add(sig)
+        deduplicated_candidates.append((label, cat_metrics, is_rr))
 
     # For each category/metric, draw a side-by-side plot
     for cat in categories:
@@ -441,16 +499,12 @@ def plot_categorized_metrics_comparison(final_results: Dict[str, Any], gold_srcs
         rr_labels = []
         rr_vals = []
 
-        for label, preds_reg, preds_rr in model_preds:
-            if preds_reg is not None:
-                cat_metrics = get_categorized_metrics(gold_srcs[:len(preds_reg)], gold_exps[:len(preds_reg)], preds_reg)
-                val = cat_metrics.get(cat, {}).get("fpr" if cat == "identity" else "tpr", 0.0)
+        for label, cat_metrics, is_rr in deduplicated_candidates:
+            val = cat_metrics.get(cat, {}).get("fpr" if cat == "identity" else "tpr", 0.0)
+            if not is_rr:
                 reg_labels.append(label)
                 reg_vals.append(val)
-            
-            if preds_rr is not None:
-                cat_metrics = get_categorized_metrics(gold_srcs[:len(preds_rr)], gold_exps[:len(preds_rr)], preds_rr)
-                val = cat_metrics.get(cat, {}).get("fpr" if cat == "identity" else "tpr", 0.0)
+            else:
                 rr_labels.append(label)
                 rr_vals.append(val)
 
