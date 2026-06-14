@@ -632,19 +632,15 @@ def print_evaluation_metrics(
     random.shuffle(false_negatives)
     random.shuffle(false_positives)
 
-    print("--- Sample: TRUE POSITIVES (Model correctly fixed the error) ---")
+    print("--- Sample: True positives ---")
     for s, e, p_str in true_positives[:3]:
         print(f"Source:   {s}\nExpected: {e}\nModel:    {p_str}\n")
 
-    print(
-        "--- Sample: FALSE NEGATIVES (Model failed to fix the error / Copying Bias) ---"
-    )
+    print("--- Sample: False negatives ---")
     for s, e, p_str in false_negatives[:3]:
         print(f"Source:   {s}\nExpected: {e}\nModel:    {p_str}\n")
 
-    print(
-        "--- Sample: FALSE POSITIVES (Model ruined a correct sentence / Over-correction) ---"
-    )
+    print("--- Sample: False positives ---")
     for s, e, p_str in false_positives[:3]:
         print(f"Source:   {s}\nExpected: {e}\nModel:    {p_str}\n")
 

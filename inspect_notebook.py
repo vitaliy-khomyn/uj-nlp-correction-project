@@ -1,1 +1,0 @@
-# Temporary inspection helper script
